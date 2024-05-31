@@ -117,7 +117,6 @@ public class EthTransaction implements Transaction {
           transactionJsonParameters.gas().orElse(DEFAULT_GAS),
           transactionJsonParameters.receiver().orElse(DEFAULT_TO),
           transactionJsonParameters.value().orElse(DEFAULT_VALUE),
-          transactionJsonParameters.data().orElse(DEFAULT_DATA),
           transactionJsonParameters.input().orElse(DEFAULT_DATA),
           transactionJsonParameters.maxPriorityFeePerGas().orElseThrow(),
           transactionJsonParameters.maxFeePerGas().orElseThrow());
@@ -128,8 +127,7 @@ public class EthTransaction implements Transaction {
           transactionJsonParameters.gas().orElse(DEFAULT_GAS),
           transactionJsonParameters.receiver().orElse(DEFAULT_TO),
           transactionJsonParameters.value().orElse(DEFAULT_VALUE),
-          transactionJsonParameters.input().orElse(DEFAULT_VALUE),
-          transactionJsonParameters.data().orElse(DEFAULT_DATA));
+          transactionJsonParameters.input().orElse(DEFAULT_DATA));
     }
   }
 }
